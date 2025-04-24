@@ -1,0 +1,26 @@
+# IDE
+.vscode
+.idea
+
+# Backend
+/back-end/.venv
+/back-end/node_modules
+/back-end/__pycache__
+/back-end/**/__pycache__
+/back-end/.env
+/back-end/*.pyc
+/back-end/**/*.pyc
+
+# Frontend
+/front-end/node_modules
+/front-end/.next
+/front-end/build
+/front-end/.env
+/front-end/.env.local
+
+# General
+.DS_Store
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

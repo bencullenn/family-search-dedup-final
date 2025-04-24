@@ -1,0 +1,16 @@
+# syntax=docker/dockerfile:1.4
+FROM python:3.10-slim
+
+WORKDIR /app
+
+# Copy dependency spec first
+COPY requirements.txt .
+
+# Install dependencies with persistent cache
+RUN --mount=type=cache,target=/root/.cache/pip \
+    pip install -r requirements.txt
+
+# Copy application code
+COPY rp_handler.py .
+
+CMD ["python3", "-u", "rp_handler.py"]
